@@ -1,10 +1,7 @@
-Here’s a detailed `README.md` for your weather app project, tailored to everything you’ve implemented so far (Next.js, OpenWeather API integration, animated weather cards, recent searches, etc.):
-
 Deployed url : cloudbuddy-1.vercel.app
 
 ---
 
-```markdown
 # 🌤️ CloudBuddy - Your Modern Weather Companion
 
 CloudBuddy is a modern, responsive weather app built using **Next.js** and **Tailwind CSS**, powered by the **OpenWeather API**. It provides real-time weather updates, hourly and daily forecasts with animated visual backgrounds, and a smooth, glassmorphic UI.
@@ -138,7 +135,3 @@ This is an educational and personal project. Data provided by OpenWeather API.
 
 Made with ❤️ by Shivam Saurav
 ```
-
----
-
-Let me know if you'd like this README in a downloadable `.md` file or want to include deployment instructions (e.g. Vercel/Render) or a custom logo/banner.
