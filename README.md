@@ -1,36 +1,144 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Here’s a detailed `README.md` for your weather app project, tailored to everything you’ve implemented so far (Next.js, OpenWeather API integration, animated weather cards, recent searches, etc.):
 
-## Getting Started
+Deployed url : cloudbuddy-1.vercel.app
 
-First, run the development server:
+---
+
+```markdown
+# 🌤️ CloudBuddy - Your Modern Weather Companion
+
+CloudBuddy is a modern, responsive weather app built using **Next.js** and **Tailwind CSS**, powered by the **OpenWeather API**. It provides real-time weather updates, hourly and daily forecasts with animated visual backgrounds, and a smooth, glassmorphic UI.
+
+## 🚀 Features
+
+- 🌎 **Current Weather Info** by city
+- 🕐 **Hourly & 7-Day Forecasts** with clear icons and temperature
+- 🌈 **Animated Weather Cards** powered by **Framer Motion** that change based on weather conditions
+- 🔍 **Recent Search History** with UI to revisit recent city searches
+- 🎨 **Minimalist Glassmorphism & Neumorphism UI** with dynamic themes
+- 🌗 **Dark/Light Mode Compatible**
+- 📱 **Mobile Responsive**
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **API**: [OpenWeather API](https://openweathermap.org/api)
+- **Image Optimization**: [Next/Image](https://nextjs.org/docs/api-reference/next/image)
+
+---
+
+## 🔧 Installation & Setup
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/yourusername/cloudbuddy.git
+   cd cloudbuddy
+   ```
+
+2. **Install Dependencies**
+   ```bash
+   npm install
+   # or
+   yarn
+   ```
+
+3. **Setup Environment Variables**
+   Create a `.env.local` file in the root and add:
+   ```env
+   NEXT_PUBLIC_WEATHER_API_KEY=your_openweather_api_key
+   ```
+
+4. **Run Development Server**
+   ```bash
+   npm run dev
+   ```
+
+   Open `http://localhost:3000` in your browser 🚀
+
+---
+
+## 🧱 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+.
+├── components
+│   ├── Home
+│   │   ├── Hero.tsx             # Main city search + weather display
+│   │   ├── ForeCast
+│   │   │   ├── DayForecast.tsx  # 7-day forecast with styled cards
+│   │   │   └── HourForecast.tsx # Hourly forecast grid
+│   │   └── RecentSearches.tsx   # Recent cities list
+├── app
+│   ├── layout.tsx
+│   └── page.tsx                 # Root page with Hero and Forecasts
+├── lib
+│   └── fetchWeather.ts          # API calls to OpenWeather
+├── styles
+│   └── globals.css
+├── public
+└── .env.local                   # API key (ignored from version control)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 APIs Used
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🌤️ OpenWeather API
 
-## Learn More
+- **Current Weather**:  
+  `https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric`
 
-To learn more about Next.js, take a look at the following resources:
+- **One Call Forecast API** (daily/hourly):  
+  `https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API_KEY}&units=metric`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🧠 Design Decisions
 
-## Deploy on Vercel
+- **Glassmorphism & Neumorphism**: Used selectively for modern aesthetics and depth without cluttering the UI.
+- **Weather-based Background Animations**: Helps enhance user experience through intuitive visual feedback.
+- **Responsive Grid Forecasts**: Day and hour forecasts are displayed in 1 or 2-column responsive layouts.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📱 Future Enhancements (Optional)
+
+- 🧪 Add Air Quality & UV Index using OpenWeather's pollution API.
+- 🌍 Add Geo-location based default weather on load.
+- 🗺️ Integrate weather maps for radar or precipitation.
+- 📈 Include interactive charts for hourly temperature trends.
+
+---
+
+## 🤝 Contributing
+
+PRs and suggestions are welcome! Please fork the repo, create a new branch, and submit a pull request.
+
+---
+
+## 📄 License
+
+MIT License © 2025 Shivam Saurav  
+This is an educational and personal project. Data provided by OpenWeather API.
+
+---
+
+## 🙌 Acknowledgements
+
+- [OpenWeather API](https://openweathermap.org/)
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+
+---
+
+Made with ❤️ by Shivam Saurav
+```
+
+---
+
+Let me know if you'd like this README in a downloadable `.md` file or want to include deployment instructions (e.g. Vercel/Render) or a custom logo/banner.
